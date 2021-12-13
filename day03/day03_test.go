@@ -27,7 +27,7 @@ func Test_calculateHomesVisited(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(string(tt.args.input), func(t *testing.T) {
-			if gotHomes := calculateHomesVisited(tt.args.input); gotHomes != tt.wantHomes {
+			if gotHomes := calculateHomesVisited(tt.args.input, nil); gotHomes != tt.wantHomes {
 				t.Errorf("calculateHomesVisited(%v) = %v, want %v", string(tt.args.input), gotHomes, tt.wantHomes)
 			}
 		})
